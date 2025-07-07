@@ -1,4 +1,4 @@
-name: Run Scraper
+name: Run scraper.py
 
 on:
   workflow_dispatch:  

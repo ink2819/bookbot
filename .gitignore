@@ -1,1 +1,5 @@
-keys.txt
+__pycache__
+.env*
+venv*
+scrapers.ipynb
+bungee_space_books.csv

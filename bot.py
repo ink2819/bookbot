@@ -1,21 +1,23 @@
 import pandas as pd
 import requests
 import time
+from dotenv import load_dotenv
 
 
-ACCESS_TOKEN = ''
-IG_USER_ID = ''  
+load_dotenv()
+ACCESS_TOKEN = os.getenv("API_KEY")
+IG_USER_ID = os.getenv("IG_USER_ID")
 
 # Read booklist.csv
 df = pd.read_csv("booklist.csv")
-title = df['title'][0]
-image_url = df['image link'][0]
+title = df['title'][13]
+image_url = df['image link'][13]
 
 #create a media container
 create_url = f'https://graph.facebook.com/v19.0/{IG_USER_ID}/media'
 create_payload = {
     'image_url': 'https:'+ image_url,
-    'caption': title,
+    'caption': title + '--Alison has built a bot that posts books to Instagram! This is a test post done with the Insta api and Python, weeeeee!',
     'access_token': ACCESS_TOKEN
 }
 create_res = requests.post(create_url, data=create_payload)

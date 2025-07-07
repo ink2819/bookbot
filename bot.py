@@ -37,7 +37,7 @@ print("Media container created:", creation_id)
 # set sleep time
 time.sleep(3)
 
-# publish the media congainer
+# publish the media container
 publish_url = f'https://graph.facebook.com/v19.0/{IG_USER_ID}/media_publish'
 publish_payload = {
     'creation_id': creation_id,

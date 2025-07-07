@@ -89,15 +89,12 @@ dfBungee = pd.DataFrame(all_items)
 
 
 
-driver_path = r"C:/Users/aliso/Downloads/chromedriver-win64/chromedriver.exe"
-
-
 chrome_options = Options()
 chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-gpu")
 
 
-service = Service(driver_path)
+service = Service()
 driver = webdriver.Chrome(service=service, options=chrome_options)
 
 all_books = []

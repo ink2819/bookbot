@@ -1,17 +1,21 @@
 import pandas as pd
 import requests
 import time
+import os
+import random
+
 from dotenv import load_dotenv
 
-
 load_dotenv()
-ACCESS_TOKEN = os.getenv("API_KEY")
+ACCESS_TOKEN = os.getenv("ACCESS_TOKEN")
 IG_USER_ID = os.getenv("IG_USER_ID")
 
+
 # Read booklist.csv
-df = pd.read_csv("booklist.csv")
-title = df['title'][13]
-image_url = df['image link'][13]
+df = pd.read_csv("ouput.csv")
+random_index = random.randint(0, len(df) - 1)
+title = df.loc[random_index, 'title']
+image_url = df['image link']
 
 #create a media container
 create_url = f'https://graph.facebook.com/v19.0/{IG_USER_ID}/media'

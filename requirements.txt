@@ -4,5 +4,3 @@ pandas
 webdriver-manager
 requests
 dotenv
-os
-random

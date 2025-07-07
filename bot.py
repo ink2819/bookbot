@@ -12,7 +12,7 @@ IG_USER_ID = os.getenv("IG_USER_ID")
 
 
 # Read booklist.csv
-df = pd.read_csv("ouput.csv")
+df = pd.read_csv("./ouput.csv")
 random_index = random.randint(0, len(df) - 1)
 title = df.loc[random_index, 'title']
 image_url = df['image link']

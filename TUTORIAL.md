@@ -344,6 +344,7 @@ df_combined.to_csv("output.csv", index=False)
 - First, put your scraping codes into one file called 'scrapers.py'; 
 - Set up a requirements.txt file and append the following: 
 ```txt
+👇this is getting fixed soon, i need to add versions!
 beautifulsoup4
 selenium
 pandas

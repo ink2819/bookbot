@@ -1,11 +1,7 @@
 name: Run bot.py
 
 on:
-  schedule:
-    - cron: '12 12 * * *'  
-  push:  
-    branches:
-      - main 
+  workflow_dispatch:  
 
 jobs:
   run-bot:
